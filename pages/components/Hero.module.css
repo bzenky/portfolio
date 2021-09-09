@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  background-color: #151515;
+}
+
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.hero .text span {
+  display: block;
+  margin: 15px;
+  font-size: 20px;
+  color: #B4A5A5;
+}
+
+.hero .text .name {
+  margin: 50px 0 20px;
+  font-size: 28px;
+}
+
+.hero .text .cv {
+  margin: 20px;
+  padding: 15px 15px;
+  border-radius: 3px;
+  background-color: #B4A5A5;
+  text-decoration: none;
+  color: #301B3F;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .5s ease-in-out;
+  border: 1px solid #B4A5A5;
+}
+
+.hero .text .cv:hover {
+  box-shadow: 0 0 5px white, 0 0 17px white, 0 0 37px rgba(255, 255, 255, 0.445);
+  border: 1px solid #d4d2d2;
+}
+
+.hero .photo {
+  width: 50%;
+  background-image: url(../../public/profile.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero .text .social {
+  display: flex;
+}
+
+.hero .text .social a {
+  margin: 0 15px;
+}
+
+.hero .text .social a:first-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero .text .social img {
+  transition: .4s ease-in-out;
+}
+
+.hero .text .social img:hover {
+  transform: scale(1.06);
+}
+
+@media screen and (max-width: 1366px) {
+  .hero .text .social img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .photo {
+    display: none;
+  }
+
+  .hero .text span {
+    font-size: 16px;
+  }
+
+  .hero .text span:first-child {
+    margin-top: 0;
+  }
+
+  .hero .text .name {
+    margin: 35px 0 0;
+    font-size: 24px;
+  }
+
+  .hero .text .cv {
+    display: none;
+  }
+
+  .hero .text .social img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero .text .social a {
+    margin: 0 10px;
+  }
+
+  .hero .text .social a:first-child {
+    bottom: 35px;
+    left: calc(50% - 66px);
+  }
+}

@@ -1,7 +1,13 @@
 import '../styles/globals.css'
+import Container from './index'
+import Hero from './components/Hero'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const portfolio = () => {
+  return (
+    <Container>
+      <Hero />
+    </Container>
+  )
 }
 
-export default MyApp
+export default portfolio
