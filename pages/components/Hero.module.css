@@ -6,6 +6,7 @@
   min-height: 100vh;
   max-height: 100%;
   background-color: #151515;
+  z-index: 10;
 }
 
 .hero .text {
@@ -87,19 +88,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
   }
 
   .hero .photo {
-    position: absolute;
-    top: 45px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-position: top center;
+    display: none;
   }
 
   .hero .text span {
     font-size: 16px;
+    color: #151515;
   }
 
   .hero .text span:first-child {
@@ -112,12 +110,15 @@
   }
 
   .hero .text .cv {
-    display: none;
+    display: absolute;
+    background-color: #151515cc;
+    color: #fff;
+    font-weight: 400;
   }
 
   .hero .text .social img {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
   }
 
   .hero .text .social a {
@@ -127,5 +128,19 @@
   .hero .text .social a:first-child {
     bottom: 35px;
     left: calc(50% - 66px);
+  }
+
+  .photoMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../public/profile.webp);
+    background-size: cover;
+    background-position: center center;
+    backdrop-filter: grayscale(100%);
   }
 }
