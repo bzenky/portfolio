@@ -90,7 +90,12 @@
   }
 
   .hero .photo {
-    display: none;
+    position: absolute;
+    top: 45px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: top center;
   }
 
   .hero .text span {
