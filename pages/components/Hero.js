@@ -16,8 +16,8 @@ const Hero = () => {
           <div className={styles.text}>
             <span>Olá, eu sou</span>
             <span className={styles.name}><strong>Bruno Zenky</strong></span>
-            <span>Front-End Developer Jr.</span>
-          
+            <span>Front-End Developer</span>
+
             <a
               href="/CV - Bruno Zenky G. Asano.pdf"
               target="_blank"
@@ -25,7 +25,7 @@ const Hero = () => {
             >
               Curriculum Vitae
             </a>
-          
+
             <div className={styles.social}>
               <a href="https://github.com/bzenky" target="_blank" rel="noreferrer">
                 <Image

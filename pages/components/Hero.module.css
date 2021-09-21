@@ -38,12 +38,16 @@
   color: #301B3F;
   font-size: 18px;
   font-weight: bold;
-  transition: .5s ease-in-out;
   border: 1px solid #B4A5A5;
+
+  transition: .5s ease-in-out;
 }
 
 .hero .text .cv:hover {
-  box-shadow: 0 0 5px white, 0 0 17px white, 0 0 37px rgba(255, 255, 255, 0.445);
+  box-shadow: 
+    0 0 5px white, 
+    0 0 17px white, 
+    0 0 37px rgba(255, 255, 255, 0.445);
   border: 1px solid #d4d2d2;
 }
 
@@ -111,30 +115,31 @@
 
   .hero .text .cv {
     display: absolute;
+    padding: 10px 10px;
     background-color: #151515cc;
     color: #fff;
     font-weight: 400;
   }
 
   .hero .text .social img {
-    width: 95px;
-    height: 95px;
+    width: 90px;
+    height: 90px;
   }
 
   .hero .text .social a {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   .hero .text .social a:first-child {
     bottom: 35px;
-    left: calc(50% - 66px);
+    left: calc(50% - 59px);
   }
 
   .photoMobile {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .4;
+    opacity: .47;
     z-index: 1;
     width: 100vw;
     height: 100vh;
