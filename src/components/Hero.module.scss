@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  background-color: #151515;
+  z-index: 10;
+
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  
+
+    span {
+      display: block;
+      margin: 15px;
+      font-size: 20px;
+      color: #B4A5A5;
+    }
+
+    .name {
+      margin: 50px 0 20px;
+      font-size: 28px;
+    }
+
+    .cv {
+    margin: 20px;
+    padding: 15px 15px;
+    border-radius: 3px;
+    background-color: #B4A5A5;
+    text-decoration: none;
+    color: #301B3F;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #B4A5A5;
+
+    transition: .5s ease-in-out;
+    }
+
+    .cv:hover {
+      box-shadow: 
+        0 0 5px white, 
+        0 0 17px white, 
+        0 0 37px rgba(255, 255, 255, 0.445);
+      border: 1px solid #d4d2d2;
+    }
+  
+
+    .social {
+      display: flex;
+    
+
+      a {
+        margin: 0 15px;
+      }
+
+      a:first-child {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+      }
+
+      img {
+        transition: .4s ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+
+  .photo {
+    width: 50%;
+    background-image: url(../../public/profile.webp);
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .hero .text .social img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  
+
+    .photo {
+      display: none;
+    }
+
+    .text {
+    
+      span {
+        font-size: 16px;
+        color: #151515;
+      }
+
+      span:first-child {
+        margin-top: 0;
+      }
+
+      .name {
+        margin: 35px 0 0;
+        font-size: 24px;
+      }
+
+      .cv {
+        display: absolute;
+        padding: 10px 10px;
+        background-color: #151515cc;
+        color: #fff;
+        font-weight: 400;
+      }
+      
+      .social {
+
+        img {
+          width: 90px;
+          height: 90px;
+        }
+
+        a {
+          margin: 0 5px;
+        }
+
+        a:first-child {
+          bottom: 35px;
+          left: calc(50% - 59px);
+        }
+      }
+    }
+  }
+
+  .photoMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .47;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../public/profile.webp);
+    background-size: cover;
+    background-position: center center;
+    backdrop-filter: grayscale(100%);
+  }
+}

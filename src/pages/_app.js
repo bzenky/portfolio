@@ -1,6 +1,6 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Container from './index'
-import Hero from './components/Hero'
+import Hero from '../components/Hero'
 
 const portfolio = () => {
   return (

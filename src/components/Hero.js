@@ -5,7 +5,7 @@ import github from '../../public/githubIcon.png'
 import linkedin from '../../public/linkedinIcon.png'
 import instagram from '../../public/instagramIcon.png'
 import youtube from '../../public/youtubeIcon.png'
-import styles from './Hero.module.css'
+import styles from './Hero.module.scss'
 
 const Hero = () => {
 
