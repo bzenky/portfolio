@@ -1,12 +1,8 @@
 import '../styles/globals.scss'
-import Container from './index'
-import Hero from '../components/Hero'
 
-const portfolio = () => {
+const portfolio = ({ Component, pageProps }) => {
   return (
-    <Container>
-      <Hero />
-    </Container>
+    <Component {...pageProps} />
   )
 }
 

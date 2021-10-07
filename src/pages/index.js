@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Hero from '../components/Hero'
 
 const Container = ({ children }) => {
   return (
@@ -9,9 +10,9 @@ const Container = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        { children }
-      </div>
+      <main>
+        <Hero />
+      </main>
     </>
   )
 }
