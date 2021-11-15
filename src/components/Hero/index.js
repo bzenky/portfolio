@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 
-import github from '../../public/githubIcon.png'
-import linkedin from '../../public/linkedinIcon.png'
-import instagram from '../../public/instagramIcon.png'
-import youtube from '../../public/youtubeIcon.png'
+import github from '/public/githubIcon.png'
+import linkedin from '/public/linkedinIcon.png'
+import instagram from '/public/instagramIcon.png'
+import youtube from '/public/youtubeIcon.png'
+
 import styles from './Hero.module.scss'
 
 const Hero = () => {
@@ -68,7 +69,6 @@ const Hero = () => {
           <div className={styles.photo} />
         </Fade>
       </div>
-      <div className={styles.photoMobile} />
     </>
   )
 }

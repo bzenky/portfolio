@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
+import Projects from '../components/Projects'
 
-const Container = ({ children }) => {
+const Container = () => {
   return (
     <>
       <Head>
@@ -12,6 +13,7 @@ const Container = ({ children }) => {
       </Head>
       <main>
         <Hero />
+        <Projects />
       </main>
     </>
   )

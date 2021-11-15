@@ -1,0 +1,192 @@
+.hero {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #151515;
+  z-index: 10;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    span {
+      display: block;
+      font-size: 20px;
+      color: #b4a5a5;
+
+      & + span {
+        margin-top: 15px;
+      }
+    }
+
+    .name {
+      margin: 50px 0 20px;
+      font-size: 28px;
+    }
+
+    .cv {
+      margin: 20px;
+      padding: 15px 15px;
+      border-radius: 3px;
+      background-color: #b4a5a5;
+      text-decoration: none;
+      color: #301b3f;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #b4a5a5;
+
+      transition: 0.5s ease-in-out;
+    }
+
+    .cv:hover {
+      box-shadow: 0 0 5px white, 0 0 17px white,
+        0 0 37px rgba(255, 255, 255, 0.445);
+      border: 1px solid #d4d2d2;
+    }
+
+    .social {
+      display: flex;
+
+      a {
+        margin: 0 15px;
+      }
+
+      a:first-child {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+      }
+
+      img {
+        transition: 0.4s ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    width: 50%;
+    background-image: url(/profile.webp);
+    background-size: cover;
+    background-position: center center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      top: 75%;
+      background: linear-gradient(to bottom, transparent, #151515);
+      z-index: 5;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .hero .text .social img {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .hero {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: #151515 url(/stars.webp);
+      background-size: cover;
+      transform: translateX(-100%);
+      z-index: -1;
+
+      animation: translateBefore 45s infinite ease-in-out alternate;
+
+      @keyframes translateBefore {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: #151515 url(/stars.webp);
+      background-size: cover;
+
+      z-index: -1;
+
+      animation: translate 45s infinite ease-in-out alternate;
+
+      @keyframes translate {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    .text {
+      span {
+        font-size: 1rem;
+        color: #b4a5a5;
+      }
+
+      span:first-child {
+        margin-top: 0;
+      }
+
+      .name {
+        margin: 35px 0 0;
+        font-size: 1.5rem;
+      }
+
+      .cv {
+        padding: 10px 10px;
+        margin: 35px 0;
+        background-color: #5248488f;
+        border: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .social {
+        img {
+          width: 90px;
+          height: 90px;
+        }
+
+        a {
+          margin: 0 5px;
+        }
+
+        a:first-child {
+          bottom: 35px;
+          left: calc(50% - 45px);
+        }
+      }
+    }
+  }
+}
