@@ -2,7 +2,7 @@
   background: #151515;
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   .projectsTitle {
     padding: 75px 15px 25px;
@@ -59,6 +59,12 @@
           align-items: center;
           color: white;
           margin-left: 5px;
+
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            filter: brightness(0.85);
+          }
         }
       }
     }
@@ -67,7 +73,7 @@
 
 @media screen and (max-width: 1150px) {
   .projects {
-    display: none;
+    // display: none;
     height: auto;
 
     .projectsTitle {
