@@ -28,6 +28,7 @@ export function Contact() {
   
   const handleFormMessage = (values, e) => {
     e.preventDefault()
+    setIsLoading(true)
     send(
       'service_wfyggjq',
       'template_v98a4y9',
@@ -35,7 +36,6 @@ export function Contact() {
       'user_aN3SkDkLMzJzlEWSsHNOo'
     )
       .then((response) => {
-        setIsLoading(true)
         if (response.status === 200) {
 
           setTimeout(() => {
@@ -50,15 +50,22 @@ export function Contact() {
 
             setIsLoading(false)
             reset()
-          }, 2500);  
+          }, 1000);  
         }
       })
       .catch((err) => {
 
         setTimeout(() => {
           setIsLoading(false)
-          alert('FAILED...', err)
-        }, 2500);  
+          Toastify({
+            text: "Erro!",              
+            duration: 3000,
+            gravity: "top",
+            style: {
+              background: "linear-gradient(0deg, rgba(21,21,21,1) 0%, rgba(242,12,12,1) 47%)",
+            },              
+            }).showToast();
+        }, 1000);  
       })
   }
 
