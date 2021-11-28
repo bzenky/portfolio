@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Contact } from '../components/Contact'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 
@@ -14,6 +15,7 @@ const Container = () => {
       <main>
         <Hero />
         <Projects />
+        <Contact />
       </main>
     </>
   )

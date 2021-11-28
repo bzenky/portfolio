@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 200px;
+  height: 55px;
+  border: none;
+  background-color: #b4a5a546;
+  cursor: default;
+
+  .loading {
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+    border-right: none;
+    border-radius: 50%;
+
+    animation: rotate 1s infinite linear;
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
