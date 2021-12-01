@@ -5,11 +5,11 @@
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  background-color: #151515;
+  background-color: var(--bg);
 
   .contactTitle {
     font-size: 2.75rem;
-    color: #b4a5a5;
+    color: var(--text);
   }
 
   .contactContent {
@@ -25,9 +25,9 @@
         margin-top: 25px;
 
         .formTitle {
-          font-size: 1.5rem;
-          color: #b4a5a5;
           margin: 25px 15px;
+          font-size: 1.5rem;
+          color: var(--text);
         }
 
         input {
@@ -43,19 +43,19 @@
         textarea {
           width: 500px;
           height: 300px;
+          padding: 15px;
           margin-top: 15px;
           color: #fff;
           background-color: #272727;
-          padding: 15px;
         }
 
         button {
-          margin-top: 40px;
           width: 200px;
           height: 55px;
+          margin-top: 40px;
           border: none;
-          background-color: #b4a5a546;
-          color: #d3caca;
+          background-color: var(--bg-button);
+          color: var(--text-lighter);
           font-size: 1rem;
           font-weight: bold;
           cursor: pointer;
@@ -65,8 +65,8 @@
           &:hover {
             box-shadow: 0 0 3px #fff;
             border: 1px solid #fff;
-            background-color: #b4a5a5;
-            color: #464141;
+            background-color: var(--text);
+            color: var(--text-darker);
           }
         }
       }

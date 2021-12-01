@@ -1,14 +1,14 @@
 .projects {
-  background: #151515;
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
+  background: var(--bg);
 
   .projectsTitle {
     padding: 75px 15px 25px;
     font-size: 2.75rem;
     text-align: center;
-    color: #b4a5a5;
+    color: var(--text);
   }
 
   .projectsCards {
@@ -34,15 +34,15 @@
 
       .projectTitle {
         padding: 25px;
-        color: #b4a5a5;
+        color: var(--text);
         font-size: 1.5rem;
       }
 
       .projectDescription {
-        color: #b4a5a5;
         padding: 0 25px;
-        line-height: 1.7;
         margin-bottom: 25px;
+        color: var(--text);
+        line-height: 1.7;
       }
 
       .linkRepo {
@@ -57,7 +57,7 @@
         .projectLink {
           display: flex;
           align-items: center;
-          color: white;
+          color: #fff;
           margin-left: 5px;
 
           transition: 0.3s ease-in-out;
@@ -94,17 +94,17 @@
         }
 
         .projectDescription {
+          padding: 10px 15px;
+          margin-bottom: 20px;
           font-size: 1rem;
           line-height: 1.5;
-          margin-bottom: 20px;
-          padding: 10px 15px;
         }
 
         .linkRepo {
           padding: 0 15px;
 
           .projectLink {
-            color: white;
+            color: #fff;
           }
         }
       }

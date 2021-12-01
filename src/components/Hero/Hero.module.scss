@@ -4,7 +4,7 @@
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  background-color: #151515;
+  background-color: var(--bg);
   z-index: 10;
   overflow: hidden;
 
@@ -12,12 +12,12 @@
     position: absolute;
     content: "";
     inset: 0;
-    background: #151515 url(/stars.webp);
+    background: url(/stars.webp);
     background-size: cover;
     transform: translateX(-100%);
     z-index: -1;
 
-    animation: translateBefore 300s infinite ease-in-out alternate;
+    animation: translateBefore 295s infinite ease-in-out alternate;
 
     @keyframes translateBefore {
       from {
@@ -33,13 +33,13 @@
     position: absolute;
     content: "";
     inset: 0;
-    background: #151515 url(/stars.webp);
+    background: url(/stars.webp);
     background-position: center;
     background-size: cover;
 
     z-index: -1;
 
-    animation: translate 300s infinite ease-in-out alternate;
+    animation: translate 295s infinite ease-in-out alternate;
 
     @keyframes translate {
       from {
@@ -61,7 +61,7 @@
     span {
       display: block;
       font-size: 20px;
-      color: #b4a5a5;
+      color: var(--text);
 
       & + span {
         margin-top: 15px;
@@ -77,20 +77,20 @@
       margin: 20px;
       padding: 15px 15px;
       border-radius: 3px;
-      background-color: #b4a5a5;
+      background-color: var(--bg-button-mobile);
       text-decoration: none;
-      color: #301b3f;
+      color: var(--text-lighter);
       font-size: 18px;
-      font-weight: bold;
-      border: 1px solid #b4a5a5;
+      text-shadow: 1px 0 2px var(--text);
+      border: 1px solid var(--text);
 
       transition: 0.5s ease-in-out;
     }
 
     .cv:hover {
-      box-shadow: 0 0 5px white, 0 0 17px white,
+      box-shadow: 0 0 5px #fff, 0 0 17px #fff,
         0 0 37px rgba(255, 255, 255, 0.445);
-      border: 1px solid #d4d2d2;
+      border: 1px solid var(--border);
     }
 
     .social {
@@ -128,7 +128,7 @@
       content: "";
       inset: 0;
       top: 70%;
-      background: linear-gradient(to bottom, transparent, #151515);
+      background: linear-gradient(to bottom, transparent, var(--bg));
       z-index: 5;
     }
   }
@@ -152,7 +152,7 @@
       position: absolute;
       content: "";
       inset: 0;
-      background: #151515 url(/stars.webp);
+      background: url(/stars.webp);
       background-size: cover;
       transform: translateX(-100%);
       z-index: -1;
@@ -173,7 +173,7 @@
       position: absolute;
       content: "";
       inset: 0;
-      background: #151515 url(/stars.webp);
+      background: url(/stars.webp);
       background-size: cover;
 
       z-index: -1;
@@ -193,7 +193,7 @@
     .text {
       span {
         font-size: 1rem;
-        color: #b4a5a5;
+        color: var(--text);
       }
 
       span:first-child {
@@ -208,7 +208,7 @@
       .cv {
         padding: 10px 10px;
         margin: 35px 0;
-        background-color: #5248488f;
+        background-color: var(--bg-button-mobile);
         border: none;
         font-size: 1rem;
         font-weight: 400;
