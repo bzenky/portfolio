@@ -23,8 +23,6 @@ export function Contact() {
   })
 
   const [isLoading, setIsLoading] = useState(false)
-
-  console.log(errors)
   
   const handleFormMessage = (values, e) => {
     e.preventDefault()

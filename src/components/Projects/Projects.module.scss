@@ -111,3 +111,17 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .projectCard {
+    text-align: center;
+
+    .projectTitle {
+      margin-top: 25px;
+    }
+
+    .linkRepo {
+      justify-content: center;
+    }
+  }
+}
