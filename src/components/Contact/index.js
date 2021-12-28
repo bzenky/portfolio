@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup' 
+import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { send } from 'emailjs-com'
 import Toastify from 'toastify-js'
+import Fade from 'react-reveal/Fade'
 
 import "toastify-js/src/toastify.css"
 import styles from './Contact.module.scss'
@@ -23,7 +24,7 @@ export function Contact() {
   })
 
   const [isLoading, setIsLoading] = useState(false)
-  
+
   const handleFormMessage = (values, e) => {
     e.preventDefault()
     setIsLoading(true)
@@ -38,17 +39,17 @@ export function Contact() {
 
           setTimeout(() => {
             Toastify({
-              text: "Mensagem enviada com sucesso!",              
+              text: "Mensagem enviada com sucesso!",
               duration: 3000,
               gravity: "top",
               style: {
                 background: "linear-gradient(4deg, rgba(21,21,21,1) 0%, rgba(180,165,165,1) 100%)",
-              },              
-              }).showToast();
+              },
+            }).showToast();
 
             setIsLoading(false)
             reset()
-          }, 1000);  
+          }, 1000);
         }
       })
       .catch((err) => {
@@ -56,60 +57,57 @@ export function Contact() {
         setTimeout(() => {
           setIsLoading(false)
           Toastify({
-            text: "Erro!",              
+            text: "Erro!",
             duration: 3000,
             gravity: "top",
             style: {
               background: "linear-gradient(0deg, rgba(21,21,21,1) 0%, rgba(242,12,12,1) 47%)",
-            },              
-            }).showToast();
-        }, 1000);  
+            },
+          }).showToast();
+        }, 1000);
       })
   }
 
   return (
     <div className={styles.contact}>
-      <h2 className={styles.contactTitle}>Contato</h2>
-      <div className={styles.contactContent}>
-        <div className={styles.formSide}>
-          <form onSubmit={handleSubmit(handleFormMessage)}>
-            <h3 className={styles.formTitle}>Mande uma mensagem</h3>
-
-            <input 
-              id="name"
-              placeholder="Nome"
-              error={errors.name}
-              {...register("name")} 
-            />
-
-            <input
-              id="email"
-              placeholder="E-mail"
-              error={errors.email}
-              {...register("email")}
-            />
-
-            <input
-              id="subject"
-              placeholder="Assunto"
-              error={errors.subject}
-              {...register("subject")}
-            />
-
-            <textarea
-              id="message"
-              placeholder="Mensagem"
-              error={errors.message}
-              {...register("message")}
-            />
-
-            { isLoading 
-              ? <LoadingButton /> 
-              : <button type="submit">Enviar</button>
-            }
-          </form>
+      <Fade>
+        <h2 className={styles.contactTitle}>Contato</h2>
+        <div className={styles.contactContent}>
+          <div className={styles.formSide}>
+            <form onSubmit={handleSubmit(handleFormMessage)}>
+              <h3 className={styles.formTitle}>Mande uma mensagem</h3>
+              <input
+                id="name"
+                placeholder="Nome"
+                error={errors.name}
+                {...register("name")}
+              />
+              <input
+                id="email"
+                placeholder="E-mail"
+                error={errors.email}
+                {...register("email")}
+              />
+              <input
+                id="subject"
+                placeholder="Assunto"
+                error={errors.subject}
+                {...register("subject")}
+              />
+              <textarea
+                id="message"
+                placeholder="Mensagem"
+                error={errors.message}
+                {...register("message")}
+              />
+              {isLoading
+                ? <LoadingButton />
+                : <button type="submit">Enviar</button>
+              }
+            </form>
+          </div>
         </div>
-      </div>
+      </Fade>
     </div>
   )
 }

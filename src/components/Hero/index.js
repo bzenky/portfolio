@@ -19,16 +19,8 @@ const Hero = () => {
             <span className={styles.name}><strong>Bruno Zenky</strong></span>
             <span>Front-End Developer</span>
 
-            <a
-              href="/CV - Bruno Zenky G. Asano.pdf"
-              target="_blank"
-              className={styles.cv}
-            >
-              Curriculum Vitae
-            </a>
-
             <div className={styles.social}>
-              <a href="https://github.com/bzenky" target="_blank" rel="noreferrer">
+              <a href="https://github.com/bzenky" target="_blank" rel="noreferrer" className={styles.socialLink}>
                 <Image
                   src={github}
                   width={140}
@@ -37,7 +29,7 @@ const Hero = () => {
                   alt="linkedin icon"
                 />
               </a>
-              <a href="https://www.linkedin.com/in/bzenky/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/bzenky/" target="_blank" rel="noreferrer" className={styles.socialLink}>
                 <Image
                   src={linkedin}
                   width={150}
@@ -46,7 +38,7 @@ const Hero = () => {
                   alt="linkedin icon"
                 />
               </a>
-              <a href="https://www.instagram.com/bzenky/" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/bzenky/" target="_blank" rel="noreferrer" className={styles.socialLink}>
                 <Image
                   src={instagram}
                   width={150}
@@ -55,7 +47,7 @@ const Hero = () => {
                   alt="instagram icon"
                 />
               </a>
-              <a href="https://www.youtube.com/channel/UCCe8rx30_1ZJ6M4oPzSJHiA" target="_blank" rel="noreferrer">
+              <a href="https://www.youtube.com/channel/UCCe8rx30_1ZJ6M4oPzSJHiA" target="_blank" rel="noreferrer" className={styles.socialLink}>
                 <Image
                   src={youtube}
                   width={150}

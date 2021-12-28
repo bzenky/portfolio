@@ -1,0 +1,136 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg);
+
+    .aboutTitle {
+        padding-top: 75px;
+        text-align: center;
+        font-size: 2.75rem;
+        color: var(--text);
+    }
+
+    .aboutContent {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1215px;  
+        padding: 50px 15px 0;
+
+        .aboutText {
+            width: 60%;
+
+            .aboutMeTitle {
+                margin-top: 35px;
+                margin-bottom: 50px;
+                font-size: 1.125rem;
+                color: var(--text);
+
+                &:first-child {
+                    text-align: center;
+                }
+            }
+
+            .aboutMe {
+                margin-top: 20px;
+                font-size: 1.125rem;
+                color: var(--text);
+
+                .aboutLink {
+                    margin-left: 5px;
+                    color: rgb(161, 134, 204);
+                    text-decoration: none;
+
+                    transition: filter 0.3s ease-in-out;
+
+                    &:hover {
+                        filter: brightness(0.9);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .aboutImg {
+            display: flex;
+            align-items: center;
+
+            .aboutGif {
+                width: 300px;
+                height: 250px;
+            }
+        }
+    }
+
+    .cv {
+        margin-top: 100px;
+        padding: 12px 12px;
+        border-radius: 3px;
+        background-color: var(--bg-button-mobile);
+        text-decoration: none;
+        color: var(--text-lighter);
+        font-size: 1rem;
+        text-shadow: 1px 0 2px var(--text);
+        border: 1px solid var(--text);
+  
+        transition: 0.5s ease-in-out;
+        
+            &:hover {
+                box-shadow: 0 0 5px #fff, 0 0 17px #fff,
+                0 0 37px rgba(255, 255, 255, 0.445);
+                border: 1px solid var(--border);
+            }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .about {
+        justify-content: center;
+
+        .aboutContent {
+            padding: 50px 25px 0;
+
+            .aboutText {
+                width: 100%;
+            }
+
+            .aboutImg {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .about {
+        .aboutTitle {
+            font-size: 2rem;
+        }
+
+        .aboutContent {
+            padding-top: 25px;
+
+            .aboutText {
+                .aboutMeTitle,
+                .aboutMe {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .cv {
+            padding: 10px 10px;
+            margin: 60px 0 35px;
+            background-color: var(--bg-button-mobile);
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+}
