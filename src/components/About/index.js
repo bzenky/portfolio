@@ -25,7 +25,7 @@ export function About() {
                             </a>
                         </p>
 
-                        <p className={styles.aboutMe}>Nos meus estudos passei tanto pelo Back quanto o Front-End<a href="https://thiago-medeiros.com/formacao-fullstack-javascript/?hsrc=cGVyZmlsRGlzY29yZA%3D%3D" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Curso FullStack)</a>, mas no decorrer percebi maior afinidade pelo Front-End, onde está o meu maior foco nos estudos. No momento estou me aprofundando mais em React e Next<a href="https://www.rocketseat.com.br/ignite" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Ignite)</a>.</p>
+                        <p className={styles.aboutMe}>Nos meus estudos passei tanto pelo Back quanto o Front-End<a href="https://go.hotmart.com/K64662872G" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Curso FullStack)</a>, mas no decorrer percebi maior afinidade pelo Front-End, onde está o meu maior foco nos estudos. No momento estou me aprofundando mais em React e Next<a href="https://www.rocketseat.com.br/ignite" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Ignite)</a>.</p>
 
                         <p className={styles.aboutMe}>Um pouco mais de minha trajetória e contatos pode ser encontrado no CV abaixo. </p>
                     </div>
@@ -34,7 +34,7 @@ export function About() {
                             src={gifAbout}
                             width={250}
                             height={250}
-                            alt="Rocket Gif" s
+                            alt="Rocket Gif"
                             className={styles.aboutGif}
                         />
                     </div>

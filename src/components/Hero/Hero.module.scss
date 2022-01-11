@@ -17,7 +17,7 @@
     transform: translateX(-100%);
     z-index: -1;
 
-    animation: translateBefore 295s infinite ease-in-out alternate;
+    animation: translateBefore 120s infinite ease-in-out alternate;
 
     @keyframes translateBefore {
       from {
@@ -39,7 +39,7 @@
 
     z-index: -1;
 
-    animation: translate 295s infinite ease-in-out alternate;
+    animation: translate 120s infinite ease-in-out alternate;
 
     @keyframes translate {
       from {
