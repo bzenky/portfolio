@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 
 import styles from './About.module.scss'
-import gifAbout from '/public/aboutGif.gif'
+import gifAbout from '/public/images/aboutGif.gif'
 
 export function About() {
     return (

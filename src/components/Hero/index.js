@@ -1,15 +1,14 @@
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade'
 
-import github from '/public/githubIcon.png'
-import linkedin from '/public/linkedinIcon.png'
-import instagram from '/public/instagramIcon.png'
-import youtube from '/public/youtubeIcon.png'
+import github from '/public/images/githubIcon.png'
+import linkedin from '/public/images/linkedinIcon.png'
+import instagram from '/public/images/instagramIcon.png'
+import youtube from '/public/images/youtubeIcon.png'
 
 import styles from './Hero.module.scss'
 
-const Hero = () => {
-
+export function Hero() {
   return (
     <>
       <div className={styles.hero}>
@@ -64,5 +63,3 @@ const Hero = () => {
     </>
   )
 }
-
-export default Hero
