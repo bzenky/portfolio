@@ -39,10 +39,16 @@
       }
 
       .projectDescription {
+        display: -webkit-box;
         padding: 0 25px;
-        margin-bottom: 25px;
+        height: 55px;
+        margin:  15px 0 65px;
         color: var(--text);
         line-height: 1.7;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .updatedAt {
@@ -55,6 +61,8 @@
         align-items: center;
         padding: 0 25px;
         margin-bottom: 20px;
+
+        transition: 0.3s ease-in-out;
 
         .linkIcon {
           filter: invert(100%);
@@ -93,41 +101,29 @@
         width: 300px;
         height: 250px;
         margin: 15px;
+        text-align: center;
 
         .projectTitle {
-          padding: 10px 15px;
+          padding: 20px 15px;
           font-size: 1.25rem;
         }
 
         .projectDescription {
           padding: 10px 15px;
-          margin-bottom: 20px;
+          margin-bottom: 35px;
           font-size: 1rem;
           line-height: 1.5;
         }
 
         .linkRepo {
           padding: 0 15px;
+          justify-content: center;
 
           .projectLink {
             color: #fff;
           }
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .projectCard {
-    text-align: center;
-
-    .projectTitle {
-      margin-top: 25px;
-    }
-
-    .linkRepo {
-      justify-content: center;
     }
   }
 }
