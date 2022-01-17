@@ -17,7 +17,7 @@ export function Projects() {
   const dynamicIndex = isShortIndex ? 3 : 6
 
   useEffect(() => {
-    axios.get('https://api.github.com/users/bzenky/repos?sort=updated&direction=des')
+    axios.get('https://api.github.com/users/bzenky/repos?sort=pushed&direction=des')
       .then(response => {
         const data = response.data
 
@@ -58,7 +58,7 @@ export function Projects() {
 
               </div>
               <span className={styles.updatedAt}>
-                Atualizado em {moment.utc(new Date(repository.updated_at).toISOString()).format('DD/MM/YYYY')}
+                Atualizado em {moment.utc(new Date(repository.pushed_at).toISOString()).format('DD/MM/YYYY')}
               </span>
             </div>
           ))}
