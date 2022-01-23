@@ -13,7 +13,7 @@ import linkIcon from '../../../public/images/linkIcon.svg'
 export function Projects() {
   const [repositories, setRepositories] = useState([])
 
-  const isShortIndex = useMediaQuery({ query: `(max-width: 1150px)` })
+  const isShortIndex = useMediaQuery({ query: `(max-width: 1000px)` })
   const dynamicIndex = isShortIndex ? 3 : 6
 
   useEffect(() => {

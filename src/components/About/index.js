@@ -8,10 +8,10 @@ export function About() {
     return (
         <div className={styles.about}>
             <Fade>
-                <h1 className={styles.aboutTitle}>Sobre</h1>
+                <h2 className={styles.aboutTitle}>Sobre</h2>
                 <div className={styles.aboutContent}>
                     <div className={styles.aboutText}>
-                        <p className={styles.aboutMeTitle}>Olá 👋</p>
+                        <h3 className={styles.aboutMeTitle}>Olá 👋</h3>
 
                         <p className={styles.aboutMe}>
                             Meu nome é Bruno Zenky, desde sempre apaixonado por finanças, exatas e tecnologia. Em um ano tão atípico quanto 2021, acabei vencendo todos os medos/incertezas e realizei a transição de carreira.
@@ -25,9 +25,9 @@ export function About() {
                             </a>
                         </p>
 
-                        <p className={styles.aboutMe}>Nos meus estudos passei tanto pelo Back quanto o Front-End<a href="https://go.hotmart.com/K64662872G" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Curso FullStack)</a>, mas no decorrer percebi maior afinidade pelo Front-End, onde está o meu maior foco nos estudos. No momento estou me aprofundando mais em React e Next<a href="https://www.rocketseat.com.br/ignite" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Ignite)</a>.</p>
+                        <p className={styles.aboutMe}>Nos meus estudos passei tanto pelo Back quanto o Front-End<a href="https://go.hotmart.com/K64662872G" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Curso FullStack)</a>, mas no decorrer percebi maior afinidade pelo Front-End, onde está o meu maior foco nos estudos no momento, me aprofundado mais em React e Next<a href="https://www.rocketseat.com.br/ignite" target="_blank" rel="noreferrer" className={styles.aboutLink}>(Ignite)</a>, almejando no futuro me tornar um Desenvolvedor Full Stack.</p>
 
-                        <p className={styles.aboutMe}>Um pouco mais de minha trajetória e contatos pode ser encontrado no CV abaixo. </p>
+                        <p className={styles.aboutMe}>Um pouco mais de minha trajetória e contatos pode ser encontrado no <em>Curriculum Vitae</em> abaixo. </p>
                     </div>
                     <div className={styles.aboutImg}>
                         <Image

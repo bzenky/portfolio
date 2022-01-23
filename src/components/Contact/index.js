@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -9,7 +10,7 @@ import Fade from 'react-reveal/Fade'
 import "toastify-js/src/toastify.css"
 import styles from './Contact.module.scss'
 
-import { LoadingButton } from '../LoadingButton'
+import spinner from '/public/images/spinnerIcon.svg'
 
 const createFormMessageSchema = yup.object().shape({
   name: yup.string().required('Por favor, insira seu nome'),
@@ -96,12 +97,12 @@ export function Contact() {
               />
               <textarea
                 id="message"
-                placeholder="Mensagem"
+                placeholder="Digite sua mensagem aqui..."
                 error={errors.message}
                 {...register("message")}
               />
               {isLoading
-                ? <LoadingButton />
+                ? <Image src={spinner} className={styles.spinner} width={55} height={55} />
                 : <button type="submit">Enviar</button>
               }
             </form>

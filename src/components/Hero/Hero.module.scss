@@ -4,6 +4,7 @@
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
+  padding-bottom: 50px;
   background-color: var(--bg);
   z-index: 10;
   overflow: hidden;
@@ -17,7 +18,7 @@
     transform: translateX(-100%);
     z-index: -1;
 
-    animation: translateBefore 120s infinite ease-in-out alternate;
+    animation: translateBefore 110s infinite ease-in-out alternate;
 
     @keyframes translateBefore {
       from {
@@ -39,7 +40,7 @@
 
     z-index: -1;
 
-    animation: translate 120s infinite ease-in-out alternate;
+    animation: translate 110s infinite ease-in-out alternate;
 
     @keyframes translate {
       from {
@@ -51,73 +52,39 @@
     }
   }
 
-  .text {
+  .heroContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-
-    span {
-      display: block;
-      font-size: 20px;
+    width: 100%;
+    
+    .heroTitle {
+      max-width: 900px;
+      line-height: 1.8;
+      font-size: 60px;
+      font-weight: bold;
       color: var(--text);
 
-      & + span {
-        margin-top: 15px;
+      .name {
+        color: white; 
       }
-    }
-
-    .name {
-      margin: 50px 0 20px;
-      font-size: 28px;
-    }
-
-    .social {
-      display: flex;
-
-      .socialLink {
-        margin: 20px 15px 0;
-      }
-
-      .socialLink:first-child {
-        position: absolute;
-        bottom: 12px;
-        left: 0;
-      }
-
-      img {
-        transition: 0.4s ease-in-out;
-      }
-
-      img:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  .photo {
-    position: relative;
-    width: 50%;
-    background-image: url(/images/profile.webp);
-    background-size: cover;
-    background-position: center center;
-
-    &::after {
-      position: absolute;
-      content: "";
-      inset: 0;
-      top: 70%;
-      background: linear-gradient(to bottom, transparent, var(--bg));
-      z-index: 5;
     }
   }
 }
 
-@media screen and (max-width: 1366px) {
-  .hero .text .social img {
-    width: 125px;
-    height: 125px;
+@media screen and (max-width: 1150px) {
+  .hero {
+    .heroContainer {
+      .heroTitle {
+        text-align: center;
+        font-size: 36px;
+      }
+
+      .name {
+        display: block;
+      }
+    }
   }
 }
 
@@ -170,38 +137,9 @@
       }
     }
 
-    .text {
-      span {
-        font-size: 1rem;
-        color: var(--text);
-      }
-
-      span:first-child {
-        margin-top: 0;
-      }
-
-      .name {
-        margin: 35px 0 0;
-        font-size: 1.5rem;
-      }
-
-      .social {
-        margin-top: 35px;
-
-        img {
-          width: 90px;
-          height: 90px;
-        }
-
-        .socialLink {
-          margin: 0 5px;
-        }
-
-        .socialLink:first-child {
-          bottom: 35px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+    .heroContainer {
+      .heroTitle {
+        font-size: 30px;
       }
     }
   }
