@@ -76,33 +76,41 @@ export function Contact() {
         <div className={styles.contactContent}>
           <div className={styles.formSide}>
             <form onSubmit={handleSubmit(handleFormMessage)}>
-              <h3 className={styles.formTitle}>Mande uma mensagem</h3>
               <input
                 id="name"
                 placeholder="Nome"
                 error={errors.name}
                 {...register("name")}
               />
+              {errors.name && <span className={styles.formError}>{errors.name.message}</span>}
+
               <input
                 id="email"
                 placeholder="E-mail"
                 error={errors.email}
                 {...register("email")}
               />
+              {errors.email && <span className={styles.formError}>{errors.email.message}</span>}
+
               <input
                 id="subject"
                 placeholder="Assunto"
                 error={errors.subject}
                 {...register("subject")}
               />
+              {errors.subject && <span className={styles.formError}>{errors.subject.message}</span>}
+
               <textarea
                 id="message"
                 placeholder="Digite sua mensagem aqui..."
                 error={errors.message}
                 {...register("message")}
               />
+
+              {errors.message && <span className={styles.formError}>{errors.message.message}</span>}
+
               {isLoading
-                ? <Image src={spinner} className={styles.spinner} width={55} height={55} />
+                ? <div className={styles.spinner}><Image src={spinner} width={55} height={55} /></div>
                 : <button type="submit">Enviar</button>
               }
             </form>

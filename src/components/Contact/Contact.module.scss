@@ -4,6 +4,7 @@
   align-items: center;
   width: 100vw;
   max-width: 100%;
+  min-height: 100vh;
   padding: 25px 0 30px;
   background-color: var(--bg);
 
@@ -24,28 +25,24 @@
         width: 700px;
         margin-top: 25px;
 
-        .formTitle {
-          margin: 0 15px 25px;
-          font-size: 1.5rem;
-          color: var(--text);
-        }
-
         input {
           width: 500px;
           height: 50px;
           padding-left: 15px;
-          margin: 15px;
           color: #fff;
           background-color: #272727;
           border: none;
+
+          & + input {
+            margin-top: 25px;
+          }
         }
 
         textarea {
           width: 500px;
           height: 200px;
           padding: 15px;
-          margin-top: 15px;
-          margin-bottom: 40px;
+          margin-top: 25px;
           color: #fff;
           background-color: #272727;
           resize: none;
@@ -54,6 +51,16 @@
         img {
           margin-top: 30px;
           animation: rotate 1s infinite linear;
+        }
+
+        .formError {
+          margin: 15px 0;
+          color: red;
+          font-weight: bold;
+        }
+
+        .spinner {
+          padding-top: 40px;
         }
 
         @keyframes rotate {
@@ -68,6 +75,7 @@
         button {
           width: 200px;
           height: 55px;
+          margin-top: 40px;
           border: none;
           background-color: var(--bg-button);
           color: var(--text-lighter);
@@ -92,7 +100,7 @@
 @media screen and (max-width: 1366px) {
   .contact {
     .contactTitle {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 }

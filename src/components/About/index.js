@@ -32,8 +32,8 @@ export function About() {
                     <div className={styles.aboutImg}>
                         <Image
                             src={gifAbout}
-                            width={250}
-                            height={250}
+                            width={300}
+                            height={300}
                             alt="Rocket Gif"
                             className={styles.aboutGif}
                         />

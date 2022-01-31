@@ -19,16 +19,16 @@
     .aboutContent {
         display: flex;
         justify-content: space-around;
-        max-width: 1215px;  
+        max-width: 1200px;  
         padding: 50px 15px 0;
 
         .aboutText {
-            width: 60%;
+            width: 100%;
 
             .aboutMeTitle {
                 margin-top: 35px;
                 margin-bottom: 50px;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 color: var(--text);
 
                 &:first-child {
@@ -38,7 +38,7 @@
 
             .aboutMe {
                 margin-top: 20px;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 color: var(--text);
 
                 .aboutLink {
@@ -59,6 +59,7 @@
         .aboutImg {
             display: flex;
             align-items: center;
+            margin-left: 50px;
 
             .aboutGif {
                 width: 300px;
@@ -88,11 +89,13 @@
     }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1150px) {
     .about {
         justify-content: center;
 
         .aboutContent {
+            position: relative;
+            max-width: 1000px;
             padding: 50px 25px 0;
 
             .aboutText {
@@ -100,8 +103,11 @@
             }
 
             .aboutImg {
-                display: none;
-                visibility: hidden;
+                position: absolute;
+                opacity: 0.1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-65%, -30%);
             }
         }
     }
@@ -123,6 +129,10 @@
                 .aboutMe {
                     font-size: 1rem;
                 }
+            }
+
+            .aboutImg {
+                display: none;
             }
         }
 
