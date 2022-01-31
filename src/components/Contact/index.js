@@ -13,7 +13,7 @@ import styles from './Contact.module.scss'
 import spinner from '/public/images/spinnerIcon.svg'
 
 const createFormMessageSchema = yup.object().shape({
-  name: yup.string().required('Por favor, insira seu nome'),
+  name: yup.string().min(3, 'Nome precisa ter no mínimo 03 caracteres').required('Por favor, insira seu nome'),
   email: yup.string().required('Por favor, insira seu e-mail').email('E-mail inválido'),
   subject: yup.string().required('Por favor, insira o assunto'),
   message: yup.string().required('Por favor, insira a mensagem')
