@@ -19,6 +19,7 @@ export function HeroSocial() {
                     >
                         <Image
                             src={github}
+                            alt="Github"
                             width={55}
                             height={55}
                         />
@@ -33,6 +34,7 @@ export function HeroSocial() {
                     >
                         <Image
                             src={linkedin}
+                            alt="Linkedin"
                             width={55}
                             height={55}
                         />
@@ -47,6 +49,7 @@ export function HeroSocial() {
                     >
                         <Image
                             src={youtube}
+                            alt="Youtube"
                             width={55}
                             height={55}
                         />
@@ -61,13 +64,12 @@ export function HeroSocial() {
                     >
                         <Image
                             src={instagram}
+                            alt="Instagram"
                             width={55}
                             height={55}
                         />
                     </a>
                 </li>
-
-
             </ul>
         </div>
     )

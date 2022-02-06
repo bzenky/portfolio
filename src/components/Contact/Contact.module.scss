@@ -33,6 +33,10 @@
           background-color: #272727;
           border: none;
 
+          &::placeholder {
+            color: var(--text-darker);
+          }
+
           & + input {
             margin-top: 35px;
           }
@@ -46,6 +50,10 @@
           color: #fff;
           background-color: #272727;
           resize: none;
+
+          &::placeholder {
+            color: var(--text-darker);
+          }
         }
 
         img {
