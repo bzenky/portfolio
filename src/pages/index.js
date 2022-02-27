@@ -9,7 +9,7 @@ const Container = () => {
     <>
       <Head>
         <title>Portfolio - Bruno Zenky</title>
-        <meta name="description" content="Olá, meu nome é Bruno Zenky, e este é um simples portfólio de apaixonado em desenvolvimento web." />
+        <meta name="description" content="Olá, meu nome é Bruno Zenky, e este é um simples portfólio de um apaixonado em desenvolvimento web." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index" />
         <meta name="theme-color" content="#151515" />
