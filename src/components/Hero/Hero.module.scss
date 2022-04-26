@@ -18,12 +18,13 @@
     transform: translateX(-100%);
     z-index: -1;
 
-    animation: translateBefore 110s infinite ease-in-out alternate;
+    animation: translateBefore 90s infinite ease-in-out alternate;
 
     @keyframes translateBefore {
       from {
         transform: translateX(-100%);
       }
+
       to {
         transform: translateX(0);
       }
@@ -40,12 +41,13 @@
 
     z-index: -1;
 
-    animation: translate 110s infinite ease-in-out alternate;
+    animation: translate 90s infinite ease-in-out alternate;
 
     @keyframes translate {
       from {
         transform: translateX(0);
       }
+
       to {
         transform: translateX(100%);
       }
@@ -58,16 +60,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
     .heroTitle {
       max-width: 900px;
       line-height: 1.8;
       font-size: 60px;
       font-weight: bold;
       color: var(--text);
+      cursor: default;
 
       .name {
-        color: white; 
+        color: white;
       }
     }
   }
@@ -110,6 +113,7 @@
         from {
           transform: translateX(-100%);
         }
+
         to {
           transform: translateX(0);
         }
@@ -131,6 +135,7 @@
         from {
           transform: translateX(0);
         }
+
         to {
           transform: translateX(100%);
         }

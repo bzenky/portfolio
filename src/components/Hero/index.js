@@ -1,5 +1,5 @@
 import Fade from 'react-reveal/Fade'
-import { HeroSocial } from '../HeroSocial'
+import { HeroSocial } from './HeroSocial'
 
 import styles from './Hero.module.scss'
 
